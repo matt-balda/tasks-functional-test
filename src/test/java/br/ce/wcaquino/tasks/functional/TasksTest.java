@@ -11,6 +11,7 @@ import junit.framework.Assert;
 public class TasksTest {
 
 	public WebDriver acessarAplicacao() {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\User\\.jenkins\\seleniumDrivers\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.navigate().to("http://localhost:8001/tasks/");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
