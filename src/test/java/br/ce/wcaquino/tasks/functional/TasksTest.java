@@ -15,11 +15,11 @@ import junit.framework.Assert;
 public class TasksTest {
 
 	public WebDriver acessarAplicacao() throws MalformedURLException {
-		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\User\\.jenkins\\seleniumDrivers\\chromedriver.exe");
-		//WebDriver driver = new ChromeDriver();
-		DesiredCapabilities cap = DesiredCapabilities.chrome();
-		WebDriver driver = new RemoteWebDriver(new URL("http://192.168.1.187:4040/wd/hub"), cap);
-		driver.navigate().to("http://192.168.1.187:8001/tasks/");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\User\\.jenkins\\seleniumDrivers\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		//DesiredCapabilities cap = DesiredCapabilities.chrome();
+		//WebDriver driver = new RemoteWebDriver(new URL("http://192.168.1.187:4040/wd/hub"), cap);
+		//driver.navigate().to("http://192.168.1.187:8001/tasks/");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		return driver;
 	}
