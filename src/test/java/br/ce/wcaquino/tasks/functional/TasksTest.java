@@ -41,8 +41,9 @@ public class TasksTest {
 
 			// clicar em salvar
 			driver.findElement(By.id("saveButton")).click();
-
+			
 			// validar mensagem de sucesso
+			driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 			String message = driver.findElement(By.id("message")).getText();
 			Assert.assertEquals("Sucess!", message);
 
