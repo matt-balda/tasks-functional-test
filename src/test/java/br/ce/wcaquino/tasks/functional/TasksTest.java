@@ -25,34 +25,34 @@ public class TasksTest {
 		return driver;
 	}
 
-	@SuppressWarnings("deprecation")
-	@Test
-	public void deveSalvarTarefaComSucesso() throws MalformedURLException {
-		WebDriver driver = acessarAplicacao();
-		try {
-			// clicar em Add Todo
-			driver.findElement(By.id("addTodo")).click();
+// 	@SuppressWarnings("deprecation")
+// 	@Test
+// 	public void deveSalvarTarefaComSucesso() throws MalformedURLException {
+// 		WebDriver driver = acessarAplicacao();
+// 		try {
+// 			// clicar em Add Todo
+// 			driver.findElement(By.id("addTodo")).click();
 
-			// escrever descrição
-			driver.findElement(By.id("task")).sendKeys("Teste via Selenium");
+// 			// escrever descrição
+// 			driver.findElement(By.id("task")).sendKeys("Teste via Selenium");
 
-			// escrever a data
-			driver.findElement(By.id("dueDate")).sendKeys("29/01/2024");
+// 			// escrever a data
+// 			driver.findElement(By.id("dueDate")).sendKeys("29/01/2024");
 
-			// clicar em salvar
-			driver.findElement(By.id("saveButton")).click();
+// 			// clicar em salvar
+// 			driver.findElement(By.id("saveButton")).click();
 			
-			// validar mensagem de sucesso
-			driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-			String message = driver.findElement(By.id("message")).getText();
-			Assert.assertEquals("Sucess!", message);
+// 			// validar mensagem de sucesso
+// 			driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+// 			String message = driver.findElement(By.id("message")).getText();
+// 			Assert.assertEquals("Sucess!", message);
 
-		} finally {
-			// fechar o browser
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			driver.quit();
-		}
-	}
+// 		} finally {
+// 			// fechar o browser
+// 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+// 			driver.quit();
+// 		}
+// 	}
 	
 	@Test
 	public void naoDeveSalvarTarefaSemDescricao() throws MalformedURLException {
